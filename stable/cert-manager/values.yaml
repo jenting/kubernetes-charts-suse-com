@@ -42,7 +42,7 @@ image:
   repository: registry.suse.com/caasp/v4.5/cert-manager-controller
   # Override the image tag to deploy by setting this variable.
   # If no value is set, the chart's appVersion will be used.
-  tag: 0.15.1
+  tag: 0.16.1
   pullPolicy: IfNotPresent
 
 # Override the namespace used to store DNS provider credentials etc. for ClusterIssuer
@@ -193,7 +193,7 @@ webhook:
     repository: registry.suse.com/caasp/v4.5/cert-manager-webhook
     # Override the image tag to deploy by setting this variable.
     # If no value is set, the chart's appVersion will be used.
-    tag: 0.15.1
+    tag: 0.16.1
     pullPolicy: IfNotPresent
 
   serviceAccount:
@@ -248,7 +248,7 @@ cainjector:
     repository: registry.suse.com/caasp/v4.5/cert-manager-cainjector
     # Override the image tag to deploy by setting this variable.
     # If no value is set, the chart's appVersion will be used.
-    tag: 0.15.1
+    tag: 0.16.1
     pullPolicy: IfNotPresent
 
   serviceAccount:

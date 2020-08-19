@@ -19,7 +19,7 @@ To install the chart with the release name `my-release`:
 
 ```console
 ## Install the cert-manager helm chart
-$ helm install --name my-release --namespace cert-manager suse/cert-manager --set installCRDs=true
+$ helm install --name my-release --namespace cert-manager suse/cert-manager
 ```
 
 In order to begin issuing certificates, you will need to set up a ClusterIssuer
@@ -63,7 +63,7 @@ The following table lists the configurable parameters of the cert-manager chart 
 | `global.leaderElection.namespace` | Override the namespace used to store the ConfigMap for leader election | `kube-system` |
 | `installCRDs` | If true, CRD resources will be installed as part of the Helm chart. If enabled, when uninstalling CRD resources will be deleted causing all installed custom resources to be DELETED | `false` |
 | `image.repository` | Image repository | `registry.suse.com/caasp/v4.5/cert-manager-controller` |
-| `image.tag` | Image tag | `0.15.1` |
+| `image.tag` | Image tag | `0.16.1` |
 | `image.pullPolicy` | Image pull policy | `IfNotPresent` |
 | `replicaCount`  | Number of cert-manager replicas  | `1` |
 | `clusterResourceNamespace` | Override the namespace used to store DNS provider credentials etc. for ClusterIssuer resources | Same namespace as cert-manager pod |
@@ -112,7 +112,7 @@ The following table lists the configurable parameters of the cert-manager chart 
 | `webhook.affinity` | Node affinity for webhook pod assignment | `{}` |
 | `webhook.tolerations` | Node tolerations for webhook pod assignment | `[]` |
 | `webhook.image.repository` | Webhook image repository | `registry.suse.com/caasp/v4.5/cert-manager-webhook` |
-| `webhook.image.tag` | Webhook image tag | `0.15.1` |
+| `webhook.image.tag` | Webhook image tag | `0.16.1` |
 | `webhook.image.pullPolicy` | Webhook image pull policy | `IfNotPresent` |
 | `webhook.securePort` | The port that the webhook should listen on for requests. | `10250` |
 | `webhook.securityContext` | Security context for webhook pod assignment | `{}` |
@@ -129,7 +129,7 @@ The following table lists the configurable parameters of the cert-manager chart 
 | `cainjector.affinity` | Node affinity for cainjector pod assignment | `{}` |
 | `cainjector.tolerations` | Node tolerations for cainjector pod assignment | `[]` |
 | `cainjector.image.repository` | cainjector image repository | `registry.suse.com/caasp/v4.5/cert-manager-cainjector` |
-| `cainjector.image.tag` | cainjector image tag | `0.15.1` |
+| `cainjector.image.tag` | cainjector image tag | `0.16.1` |
 | `cainjector.image.pullPolicy` | cainjector image pull policy | `IfNotPresent` |
 | `cainjector.securityContext` | Security context for cainjector pod assignment | `{}` |
 
